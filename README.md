@@ -13,7 +13,7 @@ https://github.com/ZdekPyPi/NativeUts
 ## Usage
 #
 
-# LIST — Exemplo de Uso
+# LIST - Exemplo de Uso
 
 ## `list.group`
 
@@ -27,7 +27,7 @@ print(a.group(3))
 
 
 
-# NUMBER  — Exemplo de Uso
+# NUMBER - Exemplo de Uso
 
 ## `float.numberToBr`
 
@@ -39,7 +39,7 @@ print(valor.numberToBr())
 #12.345,68
 ```
 
-# STRING — Exemplo de Uso
+# STRING - Exemplo de Uso
 
 ## `str.only_numbers`
 
@@ -48,11 +48,6 @@ from nativeUts.string import *
 
 print("abc123d4".only_numbers())
 #1234
-```
-
-## `str.only_numbers`
-```python
-
 ```
 
 ## `str.usToNumber`
