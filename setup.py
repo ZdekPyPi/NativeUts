@@ -10,7 +10,7 @@ classifiers = [
  
 setup(
   name='nativeUts',
-  version='1.0.0',
+  version='1.0.1',
   description='A Python package for native utilities.',
   long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
   long_description_content_type='text/markdown',
