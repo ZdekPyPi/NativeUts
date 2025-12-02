@@ -22,6 +22,6 @@ setup(
   keywords='nativeUts', 
   packages=find_packages(),
   install_requires=[
-      'forbiddenfruit',
+      'forbiddenfruit==0.1.4',
   ]
 )
