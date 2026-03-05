@@ -10,7 +10,7 @@ classifiers = [
  
 setup(
   name='nativeUts',
-  version='1.0.1',
+  version='1.0.2',
   description='A Python package for native utilities.',
   long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
   long_description_content_type='text/markdown',
@@ -23,5 +23,7 @@ setup(
   packages=find_packages(),
   install_requires=[
       'forbiddenfruit==0.1.4',
+      'pyperclip==1.11.0',
+      'pandas'
   ]
 )

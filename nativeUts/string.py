@@ -3,7 +3,9 @@ import os
 from pathlib import Path
 import re
 import posixpath
-
+import pyperclip
+import platform
+import subprocess
 
 #============================  STRING
 def only_numbers(self):
@@ -40,6 +42,24 @@ def isLike(self,pattern):
 def regx(self,pattern):
     return re.findall(pattern,self)
 
+def copy(self):
+    pyperclip.copy(self)
+
+def show_dir(self):
+    # Verifica se o caminho existe antes de tentar abrir
+    if not os.path.exists(self):
+        print(f"Erro: O caminho '{self}' não foi encontrado.")
+        return
+
+    sistema = platform.system()
+
+    if sistema == "Windows":
+        os.startfile(self)
+    elif sistema == "Darwin":  # macOS
+        subprocess.Popen(["open", self])
+    else:  # Linux
+        subprocess.Popen(["xdg-open", self])
+
 
 curse(str, "only_numbers", only_numbers)
 curse(str, "usToNumber", usToNumber)
@@ -50,3 +70,5 @@ curse(str, "joinUrl", joinUrl)
 curse(str, "fileName", fileName)
 curse(str, "isLike", isLike)
 curse(str, "regx", regx)
+curse(str, "copy", copy)
+curse(str, "show_dir", show_dir)
